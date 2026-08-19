@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   FileText, 
@@ -185,14 +186,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {/* CTAs & Action Bar */}
             <div className="pt-6 mt-6 border-t border-[#EEF7FF] flex flex-wrap items-center justify-between gap-3">
               <div className="flex flex-wrap items-center gap-2.5">
-                <a
+                <Link
                   id="hero-view-projects-btn"
-                  href="#projects"
+                  to="/projects"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#3B82F6] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1D4ED8] shadow-md shadow-blue-500/20 active:scale-95 transition-all"
                 >
                   <span>View Projects</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                </Link>
 
                 <a
                   id="hero-resume-btn"
@@ -226,14 +227,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
-                <a
-                  id="hero-email-link"
-                  href="#contact"
-                  className="p-2 rounded-lg bg-[#F8FBFF] hover:bg-white text-slate-600 hover:text-[#2563EB] border border-[#DCEEFF] transition-colors"
-                  aria-label="Email Ahmed"
+                <Link
+                  id="hero-contact-link"
+                  to="/contact"
+                  className="p-2 rounded-xl text-slate-500 hover:text-[#0F2A5F] hover:bg-[#EEF7FF] transition-colors"
+                  aria-label="Contact"
                 >
                   <Mail className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
 
