@@ -39,7 +39,7 @@ function AppContent() {
           <Route path="/journey" element={<JourneyPage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/leadership" element={<LeadershipPage />} />
-          <Route path="/contact" element={<ContactPage onOpenResume={() => setIsResumeModalOpen(true)} />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* Fallback — go home */}
           <Route path="*" element={<HomePage onOpenResume={() => setIsResumeModalOpen(true)} />} />
         </Routes>
