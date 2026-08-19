@@ -42,8 +42,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="flex items-center gap-2">
             <a
               id="resume-modal-download-btn"
-              href="/assets/Ahmed-Badawy-CV.pdf"
-              download="Ahmed-Badawy-CV.pdf"
+              href="/Ahmed_Badawy_CV.pdf"
+              download="Ahmed_Badawy_CV.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-xs"
             >
               <Download className="w-3.5 h-3.5" />
@@ -253,7 +253,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         {/* Modal Footer */}
         <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-200 flex items-center justify-between shrink-0">
           <span className="text-xs text-slate-500">
-            PDF File: <code className="text-slate-700 font-mono text-[11px]">/assets/Ahmed-Badawy-CV.pdf</code>
+            PDF File: <code className="text-slate-700 font-mono text-[11px]">/Ahmed_Badawy_CV.pdf</code>
           </span>
           <button
             onClick={onClose}

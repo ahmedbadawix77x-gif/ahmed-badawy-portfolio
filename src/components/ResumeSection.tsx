@@ -53,8 +53,8 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ onOpenResume }) =>
 
             <a
               id="resume-section-download-btn"
-              href="/assets/Ahmed-Badawy-CV.pdf"
-              download="Ahmed-Badawy-CV.pdf"
+              href="/Ahmed_Badawy_CV.pdf"
+              download="Ahmed_Badawy_CV.pdf"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-blue-600 hover:bg-blue-500 border border-blue-400/40 shadow-lg shadow-blue-600/30 transition-all active:scale-95"
             >
               <Download className="w-4 h-4" />
