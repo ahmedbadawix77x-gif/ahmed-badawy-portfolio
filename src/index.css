@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #F8FBFF;
+    color: #0F2A5F;
+    background-image: 
+      radial-gradient(at 0% 0%, #DCEEFF 0%, transparent 45%), 
+      radial-gradient(at 100% 100%, #EEF7FF 0%, transparent 45%),
+      radial-gradient(at 50% 50%, rgba(220, 238, 255, 0.3) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+}
+
+.bg-density-radial {
+  background-image: 
+    radial-gradient(at 0% 0%, #DCEEFF 0%, transparent 50%), 
+    radial-gradient(at 100% 100%, #EEF7FF 0%, transparent 50%);
+}
+
+.bg-subtle-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 246, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.035) 1px, transparent 1px);
+}
+
+/* High density border & card styling */
+.density-card {
+  background: #FFFFFF;
+  border: 1px solid #DCEEFF;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 42, 95, 0.04), 0 1px 2px -1px rgba(15, 42, 95, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.density-card:hover {
+  border-color: #93C5FD;
+  box-shadow: 0 6px 20px -4px rgba(37, 99, 235, 0.08);
+}
+
+.density-card-dark {
+  background: #0F2A5F;
+  border: 1px solid rgba(220, 238, 255, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(15, 42, 95, 0.2);
+}
+
+/* Code font helper */
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+
