@@ -75,7 +75,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               Ahmed Badawy Ramadan Hassanein
             </h1>
             <p className="text-base font-bold text-blue-600">
-              Aspiring Data Engineer | AI & Software Development Enthusiast
+              Python Backend Developer | Data Engineering
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 pt-1">
               <span className="flex items-center gap-1">

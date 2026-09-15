@@ -182,7 +182,7 @@ export const HeroVisual: React.FC = () => {
           >
             <Zap className="w-3.5 h-3.5 text-[#3B82F6] shrink-0" />
             <span className="text-[11px] font-bold text-[#0F2A5F] tracking-wide whitespace-nowrap">
-              Ahmed Badawy — Aspiring Data Engineer | AI & Data Science
+              Ahmed Badawy — Python Backend Developer | Data Engineering
             </span>
           </div>
           <div className="flex items-center gap-1.5">

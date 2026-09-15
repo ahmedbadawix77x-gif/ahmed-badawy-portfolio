@@ -122,12 +122,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                       <div
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
-                          background: 'linear-gradient(135deg, #991b1b 0%, #dc2626 60%, #f87171 100%)',
-                          boxShadow: '0 2px 12px rgba(220,38,38,0.30)',
+                          background: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #38bdf8 100%)',
+                          boxShadow: '0 2px 12px rgba(37,99,235,0.30)',
                         }}
                       >
-                        <span>🤖</span>
-                        <span>AI & Data Science</span>
+                        <span>🐍</span>
+                        <span>Python Backend</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
                       </div>
 
@@ -155,11 +155,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   Ahmed Badawy Ramadan Hassanein • Cairo, Egypt
                 </p>
                 <div className="text-lg sm:text-xl font-bold text-[#0F2A5F] mt-2">
-                  Aspiring{' '}
+                  Python Backend Developer |{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8]">
-                    Data Engineer
-                  </span>{' '}
-                  | AI & Data Science
+                    Data Engineering
+                  </span>
                 </div>
               </div>
 
