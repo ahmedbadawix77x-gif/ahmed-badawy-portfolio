@@ -20,7 +20,7 @@ export const Contact: React.FC = () => {
     message: ''
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [whatsappLink, setWhatsappLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -36,7 +36,7 @@ export const Contact: React.FC = () => {
     return newErrors;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -45,40 +45,27 @@ export const Contact: React.FC = () => {
     }
 
     setErrors({});
-    setSubmitError(null);
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/ahmedbadawix77x@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          _subject: formData.subject.trim()
-            ? `[Portfolio Inquiry] ${formData.subject.trim()} — from ${formData.name}`
-            : `[Portfolio Inquiry] New Message from ${formData.name}`,
-          message: formData.message,
-          _template: 'table',
-          _captcha: 'false'
-        })
-      });
+    const text = `👋 *New Message from Portfolio Website*
 
-      const data = await response.json();
-      if (response.ok && (data.success === 'true' || data.success === true)) {
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitError(data.message || 'Unable to send message at this moment. Please email ahmedbadawix77x@gmail.com directly.');
-      }
-    } catch (err) {
-      setSubmitError('Unable to send message right now. Please email directly at ahmedbadawix77x@gmail.com.');
-    } finally {
+👤 *Name:* ${formData.name.trim()}
+📧 *Email:* ${formData.email.trim()}
+${formData.subject.trim() ? `📌 *Subject:* ${formData.subject.trim()}\n` : ''}
+💬 *Message:*
+${formData.message.trim()}`;
+
+    const url = `https://wa.me/201011349165?text=${encodeURIComponent(text)}`;
+    setWhatsappLink(url);
+
+    // Open WhatsApp in a new tab/window
+    window.open(url, '_blank');
+
+    setTimeout(() => {
       setIsSubmitting(false);
-    }
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 400);
   };
 
   return (
@@ -163,19 +150,21 @@ export const Contact: React.FC = () => {
               </a>
 
               <a
-                id="contact-phone-card"
-                href="tel:+201011349165"
-                className="p-4 rounded-2xl bg-white border border-blue-100/90 shadow-xs hover:border-blue-300 hover:shadow-md transition-all flex items-center gap-4 group"
+                id="contact-whatsapp-card"
+                href="https://wa.me/201011349165"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-white border border-emerald-100/90 shadow-xs hover:border-emerald-300 hover:shadow-md transition-all flex items-center gap-4 group"
               >
-                <div className="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0">
-                  <span className="text-lg">📞</span>
+                <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:scale-105 group-hover:bg-[#25D366] group-hover:text-white transition-all shrink-0">
+                  <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                    Phone Number
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+                    WhatsApp & Phone
                   </div>
-                  <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors" dir="ltr">
-                    +201011349165
+                  <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors" dir="ltr">
+                    +20 101 134 9165
                   </div>
                 </div>
               </a>
@@ -203,34 +192,40 @@ export const Contact: React.FC = () => {
                 Send a Direct Message
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 mb-6">
-                Have an inquiry or collaboration proposal? Fill out the form below and I will get back to you promptly.
+                Have an inquiry or collaboration proposal? Fill out the form and it will open directly in WhatsApp chat with Ahmed.
               </p>
-
-              {submitError && (
-                <div className="mb-4 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-center gap-2.5">
-                  <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
-                  <span>{submitError}</span>
-                </div>
-              )}
 
               {isSubmitted ? (
                 <div 
                   id="contact-success-message"
-                  className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-3 animate-in fade-in duration-300"
+                  className="p-6 sm:p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-4 animate-in fade-in duration-300"
                 >
-                  <div className="flex items-center gap-2 font-bold text-emerald-800">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                    <span>Message Sent Successfully!</span>
+                  <div className="flex items-center gap-2.5 font-bold text-emerald-800 text-base">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0" />
+                    <span>Message Ready on WhatsApp!</span>
                   </div>
                   <p className="text-xs sm:text-sm text-emerald-700 leading-relaxed">
-                    Thank you for reaching out. Your message has been received, and Ahmed will review it and respond shortly.
+                    Your message has been prepared and WhatsApp was opened. If it didn't open automatically, click the button below to send it directly.
                   </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="mt-2 px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
-                  >
-                    Send Another Message
-                  </button>
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    {whatsappLink && (
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#25D366] text-white hover:bg-[#1EBE5D] shadow-md shadow-emerald-500/20 transition-all"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Open WhatsApp Chat</span>
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setIsSubmitted(false)}
+                      className="px-4 py-2.5 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-colors"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -317,19 +312,10 @@ export const Contact: React.FC = () => {
                     type="submit"
                     id="contact-submit-btn"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-md shadow-blue-600/20 active:scale-95 transition-all disabled:opacity-50"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#1EBE5D] hover:to-[#0F7669] shadow-md shadow-emerald-500/20 active:scale-95 transition-all disabled:opacity-50 cursor-pointer"
                   >
-                    {isSubmitting ? (
-                      <span className="flex items-center gap-2">
-                        <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
-                        <span>Sending message...</span>
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <Send className="w-4 h-4" />
-                        <span>Send Message</span>
-                      </span>
-                    )}
+                    <MessageSquare className="w-4 h-4" />
+                    <span>Send via WhatsApp</span>
                   </button>
                 </form>
               )}
