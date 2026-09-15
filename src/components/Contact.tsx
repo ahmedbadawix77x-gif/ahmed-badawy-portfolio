@@ -8,7 +8,8 @@ import {
   CheckCircle2, 
   Sparkles, 
   MessageSquare,
-  ArrowRight
+  ArrowRight,
+  AlertCircle
 } from 'lucide-react';
 
 export const Contact: React.FC = () => {
@@ -19,6 +20,7 @@ export const Contact: React.FC = () => {
     message: ''
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -34,7 +36,7 @@ export const Contact: React.FC = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -43,14 +45,40 @@ export const Contact: React.FC = () => {
     }
 
     setErrors({});
+    setSubmitError(null);
     setIsSubmitting(true);
 
-    // Simulate clean submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ahmedbadawix77x@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: formData.subject.trim()
+            ? `[Portfolio Inquiry] ${formData.subject.trim()} — from ${formData.name}`
+            : `[Portfolio Inquiry] New Message from ${formData.name}`,
+          message: formData.message,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok && (data.success === 'true' || data.success === true)) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitError(data.message || 'Unable to send message at this moment. Please email ahmedbadawix77x@gmail.com directly.');
+      }
+    } catch (err) {
+      setSubmitError('Unable to send message right now. Please email directly at ahmedbadawix77x@gmail.com.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 800);
+    }
   };
 
   return (
@@ -177,6 +205,13 @@ export const Contact: React.FC = () => {
               <p className="text-xs sm:text-sm text-slate-600 mb-6">
                 Have an inquiry or collaboration proposal? Fill out the form below and I will get back to you promptly.
               </p>
+
+              {submitError && (
+                <div className="mb-4 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-center gap-2.5">
+                  <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                  <span>{submitError}</span>
+                </div>
+              )}
 
               {isSubmitted ? (
                 <div 
