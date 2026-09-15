@@ -47,13 +47,24 @@ export const Contact: React.FC = () => {
     setErrors({});
     setIsSubmitting(true);
 
-    const text = `👋 *New Message from Portfolio Website*
+    const lines = [
+      'Hello Ahmed,',
+      '',
+      '*New Message from Portfolio Website*',
+      '--------------------------------',
+      `*Name:* ${formData.name.trim()}`,
+      `*Email:* ${formData.email.trim()}`
+    ];
 
-👤 *Name:* ${formData.name.trim()}
-📧 *Email:* ${formData.email.trim()}
-${formData.subject.trim() ? `📌 *Subject:* ${formData.subject.trim()}\n` : ''}
-💬 *Message:*
-${formData.message.trim()}`;
+    if (formData.subject.trim()) {
+      lines.push(`*Subject:* ${formData.subject.trim()}`);
+    }
+
+    lines.push('--------------------------------');
+    lines.push('*Message:*');
+    lines.push(formData.message.trim());
+
+    const text = lines.join('\n');
 
     const url = `https://wa.me/201011349165?text=${encodeURIComponent(text)}`;
     setWhatsappLink(url);
