@@ -155,17 +155,24 @@ export const HeroVisual: React.FC = () => {
             style={{ width: '186px', height: '186px' }}
           />
           {/* The actual photo */}
-          <img
-            src="/ahmed-photo.jpg"
-            alt="Ahmed Badawy"
-            className="relative z-10 rounded-full object-cover"
+          <div
+            className="relative z-10 rounded-full overflow-hidden"
             style={{
               width: '176px',
               height: '176px',
-              objectPosition: 'top center',
               boxShadow: '0 4px 24px rgba(59,130,246,0.25)',
             }}
-          />
+          >
+            <img
+              src="/ahmed-photo.jpg"
+              alt="Ahmed Badawy"
+              className="w-full h-full object-cover"
+              style={{
+                transform: 'scale(1.42)',
+                transformOrigin: '50% 22%',
+              }}
+            />
+          </div>
           {/* Verified checkmark */}
           <div
             className="absolute bottom-2 right-2 z-20 w-8 h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#2563EB] flex items-center justify-center border-2 border-white shadow-md"

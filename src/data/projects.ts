@@ -33,6 +33,38 @@ export const projectsData: Project[] = [
       ]
     }
   },
+  {
+    id: "efidp-platform",
+    title: "EFIDP — Egypt Financial Intelligence Data Platform",
+    subtitle: "Enterprise Data Lakehouse & Financial Analytics Platform — Python & Kafka",
+    category: "Data Engineering",
+    secondaryCategories: ["Back-End"],
+    status: "In Development",
+    description: "An enterprise-grade financial data engineering and Lakehouse platform simulating real-time and batch intelligence for Egypt's macroeconomic and capital markets. Built with Medallion architecture (Bronze/Silver/Gold on MinIO S3), Apache Kafka event streaming, Kimball Star Schema in PostgreSQL 16, Apache Airflow orchestration, and FastAPI serving layer with 100% test coverage.",
+    technologies: ["Python", "Apache Kafka", "PostgreSQL", "FastAPI", "MinIO / S3", "Apache Airflow", "Docker", "Pydantic", "Redis"],
+    featured: true,
+    github: "https://github.com/ahmedbadawix77x-gif/EFIDP",
+    demo: "https://github.com/ahmedbadawix77x-gif/EFIDP",
+    imageAccent: "linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #3b82f6 100%)",
+    details: {
+      problem: "Financial and macroeconomic data in emerging markets like Egypt is fragmented across disparate formats (PDF reports, Excel/CSV releases, public statistical portals, and banking transaction feeds). Organizations face significant challenges with schema drift, late-arriving data, lack of auditability, disparate refresh cadences, and zero end-to-end data lineage.",
+      idea: "Design an enterprise-level, production-grade financial data platform that unifies real public indicators (CBE corridor rates, EGX market indices, World Bank macro metrics) and high-throughput synthetic retail transaction streams under strict data contracts and reproducible Lakehouse architecture.",
+      solution: "Engineered an end-to-end data platform utilizing Medallion Lakehouse storage (MinIO S3), Apache Kafka (KRaft mode) for event streaming, a Kimball Star Schema data warehouse in PostgreSQL 16, Airflow DAG orchestration, and an asynchronous FastAPI serving layer. Implemented contract-first validation with Pydantic v2, automated JSON Schema exports, and achieved 100% test coverage with strict CI/CD quality gates.",
+      role: "Principal Data Platform Architect & Back-End Engineer. Designed the complete system architecture, data contracts, ingestion frameworks, containerized infrastructure, and analytical data models.",
+      challenges: "Enforcing strict zero-trust data contracts across heterogeneous data sources, maintaining deterministic payload hashing and idempotency, and achieving 100% test coverage with strict static typing (MyPy) and Ruff formatting across complex async architectures.",
+      howISolvedThem: "Implemented extensible connector patterns (API, File, Mock), JSON Schema Draft 2020-12 automated contract exports, standardized metadata envelope wrappers with SHA-256 payload verification, and circuit breaker validation reporting.",
+      whatILearned: "Deep practical mastery of enterprise Lakehouse architecture (Medallion pattern), robust schema evolution rules, stream ingestion with Kafka KRaft mode, container orchestration with multi-service Docker Compose, and rigorous software craftsmanship in Python.",
+      futureImprovements: "Real-time dbt transformations on Silver-to-Gold layers, Apache Spark distributed batch processing, and ML-based financial anomaly detection pipelines.",
+      highlights: [
+        "Medallion Lakehouse Architecture (Bronze Raw -> Silver Cleaned -> Gold Curated) on MinIO S3",
+        "Event-driven transaction streaming with Apache Kafka (KRaft mode)",
+        "Kimball Star Schema Data Warehouse in PostgreSQL 16 (Fact/Dim analytical model)",
+        "Contract-first validation engine with Pydantic v2 & automated JSON Schema export",
+        "100% test coverage (pytest, pytest-cov) with strict type checking (MyPy & Ruff)",
+        "Containerized enterprise infrastructure: Kafka, MinIO, PostgreSQL, Redis, Airflow, and FastAPI"
+      ]
+    }
+  },
 
   {
     id: "faculty-specific-education",

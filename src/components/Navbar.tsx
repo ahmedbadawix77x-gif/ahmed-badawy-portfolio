@@ -63,13 +63,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 borderRadius: '50%',
               }}
             />
-            <div className="absolute inset-[2px] rounded-full bg-white" />
-            <img
-              src="/ahmed-photo.jpg"
-              alt="Ahmed Badawy"
-              className="absolute inset-[2.5px] rounded-full object-cover object-top"
-              style={{ width: 'calc(100% - 5px)', height: 'calc(100% - 5px)' }}
-            />
+            <div className="absolute inset-[2px] rounded-full bg-white overflow-hidden">
+              <img
+                src="/ahmed-photo.jpg"
+                alt="Ahmed Badawy"
+                className="w-full h-full object-cover"
+                style={{
+                  transform: 'scale(1.42)',
+                  transformOrigin: '50% 22%',
+                }}
+              />
+            </div>
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-base tracking-tight text-[#0F2A5F]">

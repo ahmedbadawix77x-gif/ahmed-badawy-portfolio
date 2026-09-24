@@ -45,7 +45,21 @@ export const About: React.FC = () => {
           {/* Left: Detailed Story & Paragraphs */}
           <div className="lg:col-span-7 space-y-4">
             
-            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DCEEFF] shadow-xs space-y-3 text-slate-600 leading-relaxed text-xs sm:text-sm">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DCEEFF] shadow-xs space-y-3.5 text-slate-600 leading-relaxed text-xs sm:text-sm">
+              <div className="flex items-center gap-3 pb-3 border-b border-[#EEF7FF]">
+                <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-[#3B82F6]/30 shadow-xs">
+                  <img
+                    src="/ahmed-photo.jpg"
+                    alt="Ahmed Badawy"
+                    className="w-full h-full object-cover"
+                    style={{ transform: 'scale(1.42)', transformOrigin: '50% 22%' }}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-[#0F2A5F]">Ahmed Badawy Ramadan Hassanein</h3>
+                  <p className="text-[11px] text-slate-500 font-medium">Benha University · Computer Department · DEPI Team Leader</p>
+                </div>
+              </div>
               <p>
                 I am a third-year Computer student at <strong className="text-[#0F2A5F] font-bold">Faculty of Specific Education, Benha University</strong>, specializing in the <strong className="text-[#0F2A5F] font-bold">Computer Department</strong>. I am building my career around <strong className="text-[#2563EB] font-bold">Data Engineering</strong>, <strong className="text-[#2563EB] font-bold">Artificial Intelligence</strong>, software development, automation, and practical technology solutions.
               </p>
