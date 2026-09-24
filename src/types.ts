@@ -1,6 +1,7 @@
 export type ProjectCategory =
   | 'All'
   | 'AI'
+  | 'Back-End'
   | 'Data Engineering'
   | 'Web Development'
   | 'Automation'

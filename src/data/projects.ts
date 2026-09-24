@@ -2,6 +2,39 @@ import { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
+    id: "shopflow-api",
+    title: "ShopFlow API",
+    subtitle: "Production-Grade E-Commerce REST API — Python & FastAPI",
+    category: "Back-End",
+    secondaryCategories: [],
+    status: "In Development",
+    description: "A production-grade, fully-featured RESTful API for an e-commerce platform built with FastAPI and Python. Features JWT authentication, role-based access control, product & order management, Stripe payment integration, and full async database operations with PostgreSQL.",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "JWT", "Stripe", "Docker", "Alembic"],
+    featured: true,
+    github: "https://github.com/ahmedbadawix77x-gif/shopflow-api",
+    demo: "https://github.com/ahmedbadawix77x-gif/shopflow-api",
+    imageAccent: "linear-gradient(135deg, #059669 0%, #34D399 100%)",
+    details: {
+      problem: "Building scalable e-commerce backends is complex — managing authentication, product catalogs, orders, payments, and user roles in a clean, maintainable, and production-ready architecture is a significant engineering challenge.",
+      idea: "Design a clean, modular, and fully async REST API for an e-commerce platform following best practices in modern backend development with Python and FastAPI.",
+      solution: "Built a layered architecture with JWT-based auth, role-based access control (Admin/Customer), full CRUD for products and categories, order lifecycle management, Stripe payment processing, and async PostgreSQL via SQLAlchemy 2.0. Containerized with Docker Compose.",
+      role: "Back-End Engineer & API Architect. Designed and implemented the entire system from database schema to API endpoints, auth flows, and payment integration.",
+      challenges: "Implementing a clean separation of concerns across auth, business logic, and data layers while keeping async performance optimal and maintaining security at every endpoint.",
+      howISolvedThem: "Applied Repository Pattern + Service Layer architecture, used dependency injection for clean separation, implemented JWT with refresh tokens, and wrote comprehensive input validation with Pydantic v2.",
+      whatILearned: "Deep practical experience with async Python, FastAPI's dependency injection system, PostgreSQL migrations with Alembic, secure API design patterns, and Docker Compose orchestration.",
+      futureImprovements: "Redis caching layer, Celery background tasks for order notifications, full test suite with pytest, and deployment to AWS ECS.",
+      highlights: [
+        "Full JWT authentication with access & refresh token rotation",
+        "Role-Based Access Control (Admin / Customer) on all protected routes",
+        "Stripe payment integration with webhook order status sync",
+        "Async PostgreSQL with SQLAlchemy 2.0 & Alembic migrations",
+        "Dockerized with Docker Compose for one-command local setup",
+        "Clean Repository + Service Layer architecture"
+      ]
+    }
+  },
+
+  {
     id: "faculty-specific-education",
     title: "Faculty of Specific Education Website",
     subtitle: "Graduation Project — Rated Excellent by University President & 15+ Dept Heads",

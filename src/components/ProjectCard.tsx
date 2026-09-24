@@ -1,27 +1,25 @@
 import React from 'react';
 import { 
-  ArrowUpRight, 
   Github, 
   ExternalLink, 
-  Layers, 
-  Sparkles,
   Info,
-  Clock
+  Star
 } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
   project: Project;
   onOpenDetails: (project: Project) => void;
+  featured?: boolean;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails, featured }) => {
   const getStatusBadgeClass = (status: string) => {
     if (status.includes('Completed')) {
       return 'bg-emerald-50 text-emerald-700 border-emerald-200';
     }
     if (status.includes('In Development')) {
-      return 'bg-[#EEF7FF] text-[#2563EB] border-[#DCEEFF]';
+      return 'bg-emerald-50 text-emerald-700 border-emerald-200';
     }
     if (status.includes('In Progress')) {
       return 'bg-indigo-50 text-indigo-700 border-indigo-200';
@@ -32,28 +30,54 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetails
     return 'bg-cyan-50 text-cyan-700 border-cyan-200';
   };
 
+  // Extract accent color for featured glow
+  const accentColor = project.imageAccent?.match(/#[0-9a-fA-F]{6}/)?.[0] ?? '#2563EB';
+
   return (
-    <div 
+    <div
       id={`project-card-${project.id}`}
-      className="rounded-2xl bg-white border border-[#DCEEFF] shadow-xs hover:border-blue-300 hover:shadow-md hover:shadow-blue-500/5 transition-all duration-150 flex flex-col justify-between overflow-hidden group"
+      className="rounded-2xl bg-white flex flex-col justify-between overflow-hidden group transition-all duration-200 hover:-translate-y-0.5"
+      style={featured ? {
+        border: `1.5px solid ${accentColor}44`,
+        boxShadow: `0 4px 24px ${accentColor}18, 0 1px 4px ${accentColor}10`,
+      } : {
+        border: '1px solid #DCEEFF',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.04)',
+      }}
     >
       {/* Card Header Top Color Accent */}
-      <div 
-        className="h-1.5 w-full"
-        style={{ background: project.imageAccent || 'linear-gradient(90deg, #2563EB, #60A5FA)' }}
-      ></div>
+      <div
+        className="w-full"
+        style={{
+          height: featured ? '3px' : '2px',
+          background: project.imageAccent || 'linear-gradient(90deg, #2563EB, #60A5FA)',
+        }}
+      />
 
       <div className="p-4 sm:p-5 space-y-3 flex-1 flex flex-col justify-between">
         <div className="space-y-2.5">
           
           {/* Tags bar */}
           <div className="flex flex-wrap items-center justify-between gap-1.5">
-            <span className="text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#EEF7FF] text-[#2563EB] border border-[#DCEEFF]">
-              {project.category}
-            </span>
-            <span className={`text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full border ${getStatusBadgeClass(project.status)}`}>
-              {project.status}
-            </span>
+            <div className="flex items-center gap-1.5">
+              <span
+                className="text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full border"
+                style={{ background: `${accentColor}15`, color: accentColor, borderColor: `${accentColor}40` }}
+              >
+                {project.category}
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              {featured && (
+                <span className="inline-flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-200">
+                  <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-500" />
+                  Featured
+                </span>
+              )}
+              <span className={`text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-full border ${getStatusBadgeClass(project.status)}`}>
+                {project.status}
+              </span>
+            </div>
           </div>
 
           {/* Project Title & Subtitle */}
