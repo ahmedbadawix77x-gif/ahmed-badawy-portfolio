@@ -164,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               {/* Bio description */}
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl">
-                Computer student at Faculty of Specific Education, Benha University, transitioning into <strong className="text-[#0F2A5F] font-semibold">Data Engineering via DEPI – Microsoft Data Engineer Program</strong>. Ranked #1 across all tracks, selected as Team Leader. Graduation project rated "Excellent" by the University President & 15+ Department Heads.
+                Python Backend Developer and Data Engineer focused on building production-oriented backend and data systems. Hands-on with Python, SQL, Django, FastAPI, REST APIs, PostgreSQL, MySQL, SQLAlchemy, Alembic, ETL/ELT, PySpark, Apache Airflow, Apache Kafka, MinIO/S3, Redis, Docker, GitHub Actions, Prometheus, Grafana, Linux, and PowerShell. Experienced in backend development, data pipelines, data validation, automation, observability, testing, and CI/CD, with a strong focus on AI-assisted development and end-to-end data platform engineering. Currently strengthening my skills through the Microsoft Data Engineer Program (DEPI) and advanced practical projects.
               </p>
 
               {/* Quick Technology Avatars & Public Learning indicator */}

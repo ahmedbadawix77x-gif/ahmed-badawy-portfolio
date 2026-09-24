@@ -61,16 +61,13 @@ export const About: React.FC = () => {
                 </div>
               </div>
               <p>
-                I am a third-year Computer student at <strong className="text-[#0F2A5F] font-bold">Faculty of Specific Education, Benha University</strong>, specializing in the <strong className="text-[#0F2A5F] font-bold">Computer Department</strong>. I am building my career around <strong className="text-[#2563EB] font-bold">Data Engineering</strong>, <strong className="text-[#2563EB] font-bold">Artificial Intelligence</strong>, software development, automation, and practical technology solutions.
+                Python Backend Developer and Data Engineer focused on building production-oriented backend and data systems. Hands-on with Python, SQL, Django, FastAPI, REST APIs, PostgreSQL, MySQL, SQLAlchemy, Alembic, ETL/ELT, PySpark, Apache Airflow, Apache Kafka, MinIO/S3, Redis, Docker, GitHub Actions, Prometheus, Grafana, Linux, and PowerShell.
               </p>
               <p>
-                I enjoy turning problems into working solutions, learning new technologies quickly, and using <strong className="text-[#0F2A5F] font-semibold">AI-assisted development</strong> to build projects even when working with technologies that are completely new to me.
-              </p>
-              <p>
-                Currently, I am developing my skills in <strong className="text-[#0F2A5F] font-semibold">Python, SQL, Data Engineering, AI, web development, Linux</strong>, and technical problem solving.
+                Experienced in backend development, data pipelines, data validation, automation, observability, testing, and CI/CD, with a strong focus on AI-assisted development and end-to-end data platform engineering.
               </p>
               <p className="pt-2 border-t border-[#EEF7FF]">
-                I also have proven experience working in teams, leading team members as a <strong className="text-[#2563EB] font-semibold">DEPI Team Leader</strong>, coordinating tasks, communicating effectively with management, and delivering high quality under pressure.
+                Currently strengthening my skills through the Microsoft Data Engineer Program (DEPI) and advanced practical projects.
               </p>
             </div>
 
