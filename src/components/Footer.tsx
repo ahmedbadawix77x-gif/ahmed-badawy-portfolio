@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 Ahmed Badawy
               </h3>
               <p className="text-xs text-slate-400 font-medium">
-                Python Backend Developer | Data Engineering
+                Data Engineer | Data Platform &amp; Pipeline Architect
               </p>
             </div>
           </div>

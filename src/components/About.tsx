@@ -61,13 +61,13 @@ export const About: React.FC = () => {
                 </div>
               </div>
               <p>
-                Python Backend Developer and Data Engineer focused on building production-oriented backend and data systems. Hands-on with Python, SQL, Django, FastAPI, REST APIs, PostgreSQL, MySQL, SQLAlchemy, Alembic, ETL/ELT, PySpark, Apache Airflow, Apache Kafka, MinIO/S3, Redis, Docker, GitHub Actions, Prometheus, Grafana, Linux, and PowerShell.
+                Data Engineer focused on designing and building production-grade data platforms, ETL/ELT pipelines, and Lakehouse architectures. Hands-on with Python, SQL, PySpark, Apache Airflow, Apache Kafka, PostgreSQL, Kimball Star Schema Modeling, Medallion Architecture, MinIO/S3, Redis, Docker, GitHub Actions, Prometheus, Grafana, Pandas EDA, Linux, and PowerShell.
               </p>
               <p>
-                Experienced in backend development, data pipelines, data validation, automation, observability, testing, and CI/CD, with a strong focus on AI-assisted development and end-to-end data platform engineering.
+                Experienced in end-to-end data pipeline development, contract-first data validation, batch & stream processing, data governance, observability, testing, and CI/CD, with a strong focus on AI-assisted engineering and scalable data system design.
               </p>
               <p className="pt-2 border-t border-[#EEF7FF]">
-                Currently strengthening my skills through the Microsoft Data Engineer Program (DEPI) and advanced practical projects.
+                Currently advancing my skills through the Microsoft Data Engineer Program (DEPI) and practical enterprise-grade data platform projects.
               </p>
             </div>
 

@@ -74,8 +74,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Ahmed Badawy Ramadan Hassanein
             </h1>
-            <p className="text-base font-bold text-blue-600">
-              Python Backend Developer | Data Engineering
+            <p className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-600 to-emerald-600">
+              Data Engineer • Data Platform &amp; Pipeline Architect
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 pt-1">
               <span className="flex items-center gap-1">
@@ -100,7 +100,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               Professional Summary
             </h2>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              Third-year Computer student at Benha University specializing in Computer & Special Education. Building foundational and practical expertise in Data Engineering, Artificial Intelligence, SQL database optimization, Python data processing, and PowerShell system automation. Selected as DEPI Team Leader and recognized as Top Performer (#1) across tracks in previous season. Proven capability in rapid learning, technical problem solving, and AI-assisted workflow execution.
+              Third-year Computer student at Benha University specializing in Computer &amp; Special Education with a laser focus on <strong className="text-blue-700">Data Engineering</strong>. Designing <strong className="text-cyan-700">Medallion Lakehouse architectures</strong>, building <strong className="text-emerald-700">ETL/ELT pipelines</strong> with Apache Airflow, stream-processing platforms with Apache Kafka, dimensional models using <strong className="text-indigo-700">Kimball Star Schema</strong>, and PySpark-scale analytics. Microsoft Data Engineering Track (DEPI) Team Leader, recognized as <strong>Top Performer #1</strong> across tracks. Passionate about data contracts, platform observability, and turning raw events into trustworthy, decision-ready Gold tables.
             </p>
           </div>
 
@@ -228,22 +228,22 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <div>
-                <strong className="text-slate-900">Languages & DB:</strong> Python, SQL, JavaScript, TypeScript, HTML/CSS
+                <strong className="text-slate-900">Languages &amp; DB:</strong> Python (Pandas, PySpark, Pydantic), SQL, PostgreSQL, JavaScript, TypeScript
               </div>
               <div>
-                <strong className="text-slate-900">Web & Tools:</strong> React, Django, Tailwind CSS, Vite, Git, GitHub
+                <strong className="text-slate-900">Data Platform:</strong> Apache Airflow, Apache Kafka, Medallion Lakehouse, Kimball Star Schema, S3 / MinIO
               </div>
               <div>
-                <strong className="text-slate-900">Systems & OS:</strong> Linux/Ubuntu, PowerShell, CMD, Windows Troubleshooting
+                <strong className="text-slate-900">Infra &amp; DevOps:</strong> Docker, Linux/Ubuntu, Grafana, CI/CD (GitHub Actions), Git
               </div>
               <div>
-                <strong className="text-slate-900">Certificates:</strong> Google Backend, IEEE React (Helwan), Google HR, DEPI Tracks
+                <strong className="text-slate-900">Web &amp; UI:</strong> React, TypeScript, Tailwind CSS, Vite
               </div>
               <div>
-                <strong className="text-slate-900">English:</strong> B2 Upper Intermediate (Technical & Professional Communication)
+                <strong className="text-slate-900">Certificates:</strong> GDG Backend Dev, IEEE React, HP AI for Beginners, Microsoft DEPI Track
               </div>
               <div>
-                <strong className="text-slate-900">Current Track:</strong> Microsoft Data Engineer Learning Path (Expected ~Jan)
+                <strong className="text-slate-900">Current Focus:</strong> Microsoft Certified: Azure Data Engineer Associate (DP-203) path
               </div>
             </div>
           </div>

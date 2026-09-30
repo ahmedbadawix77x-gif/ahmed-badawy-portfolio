@@ -41,19 +41,6 @@ export const certificatesData: Certificate[] = [
     issuer: "HP LIFE / HP Foundation"
   },
   {
-    id: "hp-communication",
-    title: "Professional Networking for Career Growth",
-    organization: "HP LIFE — HP Foundation",
-    focus: ["Professional Networking", "Personal Branding", "Career Growth", "Digital Tools"],
-    description: "HP LIFE course completion — learned the importance of professional networking for career growth, practical strategies for building a professional network, the role of personal branding, and digital tools for career development. Issued 12/11/2025.",
-    skillsAcquired: ["Professional Networking", "Personal Branding", "Career Development", "Digital Tools", "Communication Strategy"],
-    category: "Professional & Leadership",
-    status: "Completed",
-    image: "/certificates/cert-hp-communication.png",
-    date: "Nov 2025",
-    issuer: "HP LIFE / HP Foundation"
-  },
-  {
     id: "hp-ai-beginners",
     title: "AI for Beginners",
     organization: "HP LIFE — HP Foundation",
@@ -63,6 +50,19 @@ export const certificatesData: Certificate[] = [
     category: "AI & Data",
     status: "Completed",
     image: "/certificates/cert-hp-ai-beginners.png",
+    date: "Nov 2025",
+    issuer: "HP LIFE / HP Foundation"
+  },
+  {
+    id: "hp-communication",
+    title: "Professional Networking for Career Growth",
+    organization: "HP LIFE — HP Foundation",
+    focus: ["Professional Networking", "Personal Branding", "Career Growth", "Digital Tools"],
+    description: "HP LIFE course completion — learned the importance of professional networking for career growth, practical strategies for building a professional network, the role of personal branding, and digital tools for career development. Issued 12/11/2025.",
+    skillsAcquired: ["Professional Networking", "Personal Branding", "Career Development", "Digital Tools", "Communication Strategy"],
+    category: "Professional & Leadership",
+    status: "Completed",
+    image: "/certificates/cert-hp-communication.png",
     date: "Nov 2025",
     issuer: "HP LIFE / HP Foundation"
   }

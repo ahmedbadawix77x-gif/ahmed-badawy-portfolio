@@ -45,7 +45,7 @@ export const QuickStats: React.FC = () => {
       id: "stat-projects",
       icon: FolderGit2,
       value: "Practical Projects",
-      title: "AI, Web & Data",
+      title: "Data Eng, Cloud & Platforms",
       subtitle: "Verified Repos",
       badge: "Code"
     }

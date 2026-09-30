@@ -6,7 +6,7 @@ import {
   Globe,
   Terminal,
   GraduationCap,
-  Server,
+  BarChart3,
   ArrowRight,
   Star,
 } from 'lucide-react';
@@ -27,10 +27,10 @@ export const Projects: React.FC = () => {
       color: '#2563EB',
     },
     {
-      name: 'Back-End',
-      icon: Server,
-      count: projectsData.filter(p => p.category === 'Back-End' || p.secondaryCategories?.includes('Back-End')).length,
-      color: '#059669',
+      name: 'Analytics',
+      icon: BarChart3,
+      count: projectsData.filter(p => p.category === 'Analytics' || p.secondaryCategories?.includes('Analytics')).length,
+      color: '#7C3AED',
     },
     {
       name: 'AI',

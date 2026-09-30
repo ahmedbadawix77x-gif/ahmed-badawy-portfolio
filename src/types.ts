@@ -1,11 +1,11 @@
 export type ProjectCategory =
   | 'All'
   | 'AI'
-  | 'Back-End'
   | 'Data Engineering'
   | 'Web Development'
   | 'Automation'
-  | 'Education';
+  | 'Education'
+  | 'Analytics';
 
 export type ProjectStatus =
   | 'Completed'

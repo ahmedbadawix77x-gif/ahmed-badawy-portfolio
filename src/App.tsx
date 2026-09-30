@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
+import { CustomCursor } from './components/CustomCursor';
 
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -58,6 +59,7 @@ function AppContent() {
 export default function App() {
   return (
     <HashRouter>
+      <CustomCursor />
       <AppContent />
     </HashRouter>
   );

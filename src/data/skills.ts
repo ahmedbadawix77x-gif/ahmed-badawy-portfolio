@@ -12,97 +12,104 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    id: "programming",
-    category: "Programming Languages",
-    badge: "Core Foundations",
-    description: "Solid foundational programming skills with emphasis on data manipulation, scripting, and web logic.",
+    id: "data-engineering",
+    category: "Data Engineering & Platforms",
+    badge: "Core Specialization",
+    description: "Enterprise-grade data platform engineering with Lakehouse architectures, data pipelines, warehouse modeling, and batch/stream processing systems.",
     skills: [
-      { name: "Python", focus: "Data scripting, algorithms & DEPI advanced track", highlight: true },
-      { name: "SQL", focus: "Relational querying, schema design & transformations", highlight: true },
-      { name: "JavaScript", focus: "Modern ES6+, DOM manipulation & dynamic apps" },
-      { name: "TypeScript", focus: "Type safety, interfaces & scalable frontend code" },
-      { name: "HTML5", focus: "Semantic structure & accessibility" },
-      { name: "CSS3", focus: "Modern layouts, Flexbox, Grid & animations" }
+      { name: "SQL & Advanced Querying", focus: "Window functions, CTEs, query optimization & indexing", highlight: true },
+      { name: "Data Engineering", focus: "ETL/ELT, pipeline lifecycle & data governance", highlight: true },
+      { name: "Medallion Architecture", focus: "Bronze/Silver/Gold Lakehouse layers on S3-compatible storage", highlight: true },
+      { name: "Kimball Dimensional Modeling", focus: "Star/Snowflake schemas, Fact & Dim table design", highlight: true },
+      { name: "Apache Airflow", focus: "DAG orchestration, scheduling & pipeline dependencies" },
+      { name: "Apache Kafka", focus: "Event streaming, KRaft mode & topic architectures" },
+      { name: "PySpark", focus: "Distributed batch processing & large-scale transformations" },
+      { name: "Data Pipelines", focus: "Ingestion, staging, transformation & loading logic" },
+      { name: "Data Storage", focus: "PostgreSQL, MinIO/S3, Redis caching & warehouse schemas" },
+      { name: "Data Processing", focus: "Automated cleaning, structured parsing & contract validation" }
     ]
   },
   {
-    id: "data-engineering",
-    category: "Data & Pipelines",
-    badge: "Specialized Track",
-    description: "Active development track in data architecture, querying, transformation pipelines, and analytical processing.",
+    id: "analytics-python",
+    category: "Programming & Analytics",
+    badge: "Technical Foundation",
+    description: "Data-centric programming skills with Python for manipulation, scripting, exploratory analysis, and pipeline code authoring.",
     skills: [
-      { name: "SQL Querying", focus: "Joins, aggregations, subqueries & optimization", highlight: true },
-      { name: "Data Engineering", focus: "Pipeline lifecycle, ETL patterns & processing", highlight: true },
-      { name: "Data Analytics", focus: "Exploratory data analysis & metrics extraction" },
-      { name: "Data Pipelines", focus: "Ingestion, staging & transformation logic" },
-      { name: "Data Storage", focus: "Relational database structures & storage schemas" },
-      { name: "Data Processing", focus: "Automated cleaning & structured parsing" }
+      { name: "Python", focus: "Pandas EDA, data scripts, pipeline code & DEPI advanced track", highlight: true },
+      { name: "SQL", focus: "Relational querying, schema design & advanced transformations", highlight: true },
+      { name: "Exploratory Data Analysis", focus: "Statistical summaries, trend extraction & feature engineering" },
+      { name: "Data Visualization", focus: "Matplotlib, insights extraction & data storytelling" },
+      { name: "JavaScript", focus: "Modern ES6+, DOM manipulation & dynamic dashboards" },
+      { name: "TypeScript", focus: "Type safety, interfaces & scalable frontend code" }
     ]
   },
   {
     id: "ai-problem-solving",
-    category: "AI & Problem Solving",
-    badge: "Productivity Multiplier",
-    description: "Applying AI as an engineering accelerator for rapid learning, script authoring, debugging, and solution design.",
+    category: "AI & Engineering Productivity",
+    badge: "Accelerator Layer",
+    description: "Applying AI as a data engineering accelerator for rapid pipeline design, contract authoring, debugging, and architectural decision support.",
     skills: [
-      { name: "AI-Assisted Development", focus: "Rapid technology onboarding & accelerated coding", highlight: true },
+      { name: "AI-Assisted Development", focus: "Rapid tech onboarding & accelerated pipeline coding", highlight: true },
       { name: "Prompt Engineering", focus: "Structured context design & hallucination reduction", highlight: true },
-      { name: "AI Assistants", focus: "Domain knowledge retrieval & conversational UX" },
+      { name: "AI Data Debugging", focus: "Investigating pipeline failures & log parsing" },
       { name: "Automation Workflows", focus: "End-to-end task automation with AI synthesis" },
-      { name: "AI Debugging & Analysis", focus: "Investigating complex errors & log parsing" },
-      { name: "Problem Decomposition", focus: "Breaking complex roadblocks into actionable milestones" }
+      { name: "Problem Decomposition", focus: "Breaking data roadblocks into actionable milestones" },
+      { name: "Schema & Contract Design", focus: "AI-aided Pydantic models & JSON Schema drafting" }
+    ]
+  },
+  {
+    id: "devops-infra",
+    category: "Infrastructure & DevOps for Data",
+    badge: "Platform Reliability",
+    description: "Containerization, orchestration, observability, and CI/CD tooling tailored for data platform deployments and pipeline reliability.",
+    skills: [
+      { name: "Docker & Compose", focus: "Containerized data infra: Kafka, MinIO, Postgres, Airflow", highlight: true },
+      { name: "Observability Stack", focus: "Prometheus metrics, Grafana dashboards & alerting", highlight: true },
+      { name: "GitHub Actions", focus: "CI/CD pipelines, test coverage gates & automated checks" },
+      { name: "Linux / Ubuntu", focus: "Command line, packages, bash scripting & environment setup" },
+      { name: "PowerShell & CMD", focus: "Windows automation scripts & process orchestration" },
+      { name: "Git & GitHub", focus: "Version control, branching & data project repositories" }
     ]
   },
   {
     id: "web-development",
-    category: "Web Development",
-    badge: "Full-Stack Web",
-    description: "Building responsive, modern, user-centric web applications and portals.",
+    category: "Web & Data Serving",
+    badge: "Presentation Layer",
+    description: "Modern web frontends and lightweight serving layers for data dashboards, analytics interfaces, and portfolio projects.",
     skills: [
-      { name: "React", focus: "Component architecture, hooks & responsive states", highlight: true },
-      { name: "Django", focus: "Backend framework, models & server logic" },
-      { name: "Tailwind CSS", focus: "Utility-first modern styling & responsiveness" },
-      { name: "Vite", focus: "Modern build tooling & dev server workflows" }
+      { name: "React", focus: "Component architecture, hooks & responsive dashboards", highlight: true },
+      { name: "Tailwind CSS", focus: "Utility-first styling & responsive UI for data views" },
+      { name: "Vite", focus: "Modern build tooling & dev server workflows" },
+      { name: "HTML5 / CSS3", focus: "Semantic structure, layouts & accessibility" }
     ]
   },
   {
-    id: "systems-troubleshooting",
-    category: "Systems & Troubleshooting",
-    badge: "Hardware & OS Diagnostics",
-    description: "Hands-on diagnostic and automation capabilities across Windows, Linux, and hardware components.",
-    skills: [
-      { name: "PowerShell & CMD", focus: "System automation scripts & process orchestration", highlight: true },
-      { name: "Linux / Ubuntu", focus: "Command line navigation, packages & basic environment", highlight: true },
-      { name: "Windows Troubleshooting", focus: "SFC, CHKDSK, Disk Management & service repair" },
-      { name: "Hardware Diagnostics", focus: "CPU, GPU, RAM, SSD/HDD & component health" },
-      { name: "Git & GitHub", focus: "Version control, branching & project repositories" },
-      { name: "Performance Optimization", focus: "Bottleneck identification & system tuning" }
-    ]
-  },
-  {
-    id: "networking",
-    category: "Computer Networking",
-    badge: "Core Knowledge",
-    description: "Sound foundational understanding of computer networks, protocols, architectures, and data transmission.",
+    id: "networking-systems",
+    category: "Systems & Networking",
+    badge: "Foundational Knowledge",
+    description: "Core systems knowledge, hardware diagnostics, and computer networking fundamentals that underpin reliable data infrastructure.",
     skills: [
       { name: "Network Fundamentals", focus: "OSI & TCP/IP models, packet routing & addressing" },
-      { name: "Protocols & Systems", focus: "HTTP/S, DNS, DHCP, IP addressing & client-server flows" },
-      { name: "Academic Coursework", focus: "Advanced Computer Networks (Benha University)" }
+      { name: "Protocols & Systems", focus: "HTTP/S, DNS, DHCP, IP addressing & data flows" },
+      { name: "Hardware Diagnostics", focus: "CPU, GPU, RAM, SSD/HDD & component health" },
+      { name: "Windows Troubleshooting", focus: "SFC, CHKDSK, Disk Management & service repair" },
+      { name: "Performance Optimization", focus: "Bottleneck identification & system tuning" }
     ]
   }
 ];
 
 export const professionalSkills = [
-  { name: "Fast Learning", highlight: true, description: "Mastering unfamiliar tools rapidly and turning concepts into working software." },
-  { name: "Problem Solving", highlight: true, description: "Structured analytical debugging and practical solution execution." },
-  { name: "Leadership", highlight: false, description: "Proven as DEPI Team Leader coordinating peers and monitoring deliverables." },
+  { name: "Fast Learning", highlight: true, description: "Mastering unfamiliar data tools rapidly and turning concepts into production-ready pipelines." },
+  { name: "Problem Solving", highlight: true, description: "Structured analytical debugging of pipeline failures, schema drift, and data quality issues." },
+  { name: "Data-Centric Thinking", highlight: true, description: "Designing systems around data contracts, lineage, auditability, and quality gates." },
+  { name: "Leadership", highlight: false, description: "Proven as DEPI Team Leader coordinating peers and monitoring data project deliverables." },
   { name: "Teamwork & Collaboration", highlight: false, description: "Active contributor across technical and non-technical teams (GDG)." },
-  { name: "Analytical Thinking", highlight: false, description: "Breaking down intricate requirements into systematic steps." },
-  { name: "Technical Thinking", highlight: false, description: "Evaluating architectural tradeoffs and designing resilient systems." },
-  { name: "Communication", highlight: false, description: "Clear articulation with management, team members, and stakeholders." },
-  { name: "Time Management", highlight: false, description: "Prioritizing tasks and balancing university studies with professional initiatives." },
-  { name: "Working Under Pressure", highlight: false, description: "Maintaining composure, accuracy, and output under tight deadlines." },
-  { name: "Adaptability", highlight: false, description: "Quickly adjusting to emerging frameworks, requirements, and workflows." },
-  { name: "Self-Driven Learning", highlight: false, description: "Continuous self-guided study through industry courses and repositories." },
-  { name: "Technical Presentation", highlight: false, description: "Demonstrating project solutions and presenting structured reports." }
+  { name: "Analytical Thinking", highlight: false, description: "Breaking intricate data requirements into systematic pipeline stages." },
+  { name: "Technical Thinking", highlight: false, description: "Evaluating architectural tradeoffs for scalable data storage and processing." },
+  { name: "Communication", highlight: false, description: "Clear articulation with management, team members, and data stakeholders." },
+  { name: "Time Management", highlight: false, description: "Prioritizing tasks and balancing university studies with DEPI professional initiatives." },
+  { name: "Working Under Pressure", highlight: false, description: "Maintaining composure, accuracy, and output under tight pipeline deadlines." },
+  { name: "Adaptability", highlight: false, description: "Quickly adjusting to emerging data frameworks, storage systems, and workflows." },
+  { name: "Self-Driven Learning", highlight: false, description: "Continuous self-guided study through Microsoft Learn, DEPI, and data engineering repositories." },
+  { name: "Technical Presentation", highlight: false, description: "Demonstrating data platform solutions and presenting structured analysis reports." }
 ];
