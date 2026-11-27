@@ -36,6 +36,8 @@
     @keyframes sp-bob{from{transform:translateY(0)}to{transform:translateY(-10px)}}
     .splash-photo-ring{position:relative;z-index:2;width:140px;height:140px;margin-bottom:24px;animation:splash-enter .7s cubic-bezier(.34,1.4,.64,1) .1s both}
     @keyframes splash-enter{from{opacity:0;transform:scale(.7) translateY(16px)}to{opacity:1;transform:none}}
+    .splash-photo-ring::before{content:'';position:absolute;inset:-8px;border-radius:50%;z-index:0;box-shadow:0 0 26px 4px rgba(245,184,46,.38),0 0 70px 14px rgba(250,204,21,.2);animation:sp-gold 3.2s ease-in-out infinite alternate}
+    @keyframes sp-gold{from{opacity:.65;transform:scale(.98)}to{opacity:1;transform:scale(1.04)}}
     .splash-ring-outer{position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(from 0deg,#3776AB,#FFD43B,#F05032,#2496ED,#3776AB);animation:spin 5s linear infinite}
     @keyframes spin{to{transform:rotate(360deg)}}
     .splash-ring-gap{position:absolute;inset:-3px;border-radius:50%;background:#fff}
