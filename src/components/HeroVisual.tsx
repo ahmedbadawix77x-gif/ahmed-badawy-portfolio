@@ -261,7 +261,7 @@ export const HeroVisual: React.FC = () => {
                 width: '190px',
                 height: '190px',
                 borderRadius: '50%',
-                border: '1.5px solid rgba(59,130,246,0.55)',
+                border: '1.5px solid rgba(59,130,246,0.3)',
                 animation: 'hv-sonar 3.6s ease-out infinite',
                 animationDelay: `${d}s`,
                 pointerEvents: 'none',
@@ -277,7 +277,7 @@ export const HeroVisual: React.FC = () => {
               width: '230px',
               height: '230px',
               background:
-                'radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(99,102,241,0.06) 50%, transparent 80%)',
+                'radial-gradient(circle, rgba(100,116,139,0.07) 0%, rgba(148,163,184,0.03) 50%, transparent 80%)',
               filter: 'blur(10px)',
             }}
           />
@@ -293,7 +293,7 @@ export const HeroVisual: React.FC = () => {
                 'conic-gradient(from 0deg, #3B82F6, #22D3EE, #34D399, #6366F1, #3B82F6)',
               padding: '2px',
               animation: 'hv-spin 7s linear infinite',
-              boxShadow: '0 0 14px rgba(59,130,246,0.22)',
+              boxShadow: '0 0 10px rgba(15,42,95,0.08)',
             }}
           >
             <div className="w-full h-full bg-white rounded-full" />
