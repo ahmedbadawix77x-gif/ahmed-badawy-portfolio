@@ -125,7 +125,6 @@ body {
   .decor .r1, .decor .d1, .decor .t1, .decor .p1, .decor .w1 { display: none; }
   .decor .blob { opacity: .25; }
 }
-@media (prefers-reduced-motion: reduce) { .decor .shape { animation: none !important; } }
 
 /* ---------- tools & software badges ---------- */
 .tool-tile {
@@ -160,7 +159,6 @@ body {
 @keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 7px)); } }
 @keyframes marquee-right { from { transform: translateX(calc(-50% - 7px)); } to { transform: translateX(0); } }
 @keyframes tool-pop { from { opacity: 0; transform: translateY(18px) scale(.7); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .marquee-track { animation-play-state: paused; } }
 
 /* ---- Data pipeline motif (source -> transform -> load) ---- */
 .flow { display: grid; grid-template-columns: 1fr 72px 1fr 72px 1fr; align-items: center; gap: 0; }
@@ -183,4 +181,22 @@ body {
   .flow-link { width: 2px; height: 44px; margin: 0 auto; background: repeating-linear-gradient(180deg, #CBD8EA 0 6px, transparent 6px 12px); }
   .flow-dot { left: -3px; top: 0; animation-name: flow-y; }
 }
-@media (prefers-reduced-motion: reduce) { .flow-dot, .flow-node.pulse { animation: none; opacity: 1; } .flow-dot { left: 40%; } }
+
+/* ---- Extra life for the sections below the hero (always on, ignores reduce-motion) ---- */
+@keyframes icon-bob { 0%,100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+@keyframes icon-glow { 0%,100% { box-shadow: 0 0 0 0 transparent; } 50% { box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--c) 60%, transparent); } }
+@keyframes blob-drift { 0%,100% { translate: 0 0; scale: 1; } 50% { translate: 24px -18px; scale: 1.08; } }
+@keyframes link-march { to { background-position: 24px 0; } }
+@keyframes link-march-y { to { background-position: 0 24px; } }
+@keyframes chip-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+.tool-icon { animation: icon-bob 3.6s ease-in-out infinite, icon-glow 3.6s ease-in-out infinite; }
+.marquee-item:nth-child(3n+1) .tool-icon { animation-delay: -.6s, -.6s; }
+.marquee-item:nth-child(3n+2) .tool-icon { animation-delay: -1.8s, -1.8s; }
+.marquee-item:nth-child(3n) .tool-icon { animation-delay: -2.7s, -2.7s; }
+.decor .blob { animation: blob-drift 14s ease-in-out infinite; }
+.decor .b2 { animation-duration: 18s; animation-delay: -4s; }
+.decor .b3 { animation-duration: 16s; animation-delay: -8s; }
+.decor .b4 { animation-duration: 20s; animation-delay: -2s; }
+.flow-link { animation: link-march 1.2s linear infinite; }
+.flow-chip { animation: chip-pulse 2.8s ease-in-out infinite; }
+@media (max-width: 860px) { .flow-link { animation-name: link-march-y; } }
