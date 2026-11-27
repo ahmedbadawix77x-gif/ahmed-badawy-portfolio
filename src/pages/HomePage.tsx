@@ -83,20 +83,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenResume }) => {
               </p>
             </div>
 
-            <div className="mt-10 grid md:grid-cols-2 gap-5">
-              {CATEGORIES.map((c, idx) => (
-                <div key={c.title} className={`density-card p-5 sm:p-6 ${idx === 0 ? 'md:col-span-2' : ''}`}>
+            <div className="mt-10 space-y-5">
+              {CATEGORIES.map((c, idx) => {
+                const half = Array.from({ length: Math.ceil(16 / c.tools.length) }, () => c.tools).flat();
+                return (
+                <div key={c.title} className="density-card p-5 sm:p-6">
                   <div className="flex items-center gap-2.5 mb-4">
                     <span className={`w-2.5 h-7 rounded-full bg-gradient-to-b ${c.grad}`} />
                     <h3 className="text-sm font-bold uppercase tracking-wider text-[#0F2A5F]">{c.title}</h3>
                   </div>
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
-                    {c.tools.map((t) => (
-                      <ToolTile key={t.key} tool={t} />
-                    ))}
+                  <div className={`marquee ${idx % 2 ? 'rev' : ''}`} style={{ ['--dur' as string]: `${Math.max(24, half.length * 3.2)}s` }}>
+                    <div className="marquee-track">
+                      {[...half, ...half].map((t, i) => (
+                        <div key={t.key + i} className="marquee-item" style={{ animationDelay: `${Math.min(i, 20) * 0.08}s` }} aria-hidden={i >= half.length}>
+                          <ToolTile tool={t} />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
