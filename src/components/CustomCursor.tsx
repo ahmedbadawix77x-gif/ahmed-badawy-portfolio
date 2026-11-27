@@ -41,8 +41,8 @@ export const CustomCursor: React.FC = () => {
         height: isHovering ? 60 : 40,
         borderRadius: '50%',
         background: isHovering
-          ? 'radial-gradient(circle, rgba(16,185,129,0.3) 0%, rgba(6,182,212,0.05) 60%, transparent 80%)'
-          : 'radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(99,102,241,0.05) 60%, transparent 80%)',
+          ? 'radial-gradient(circle, rgba(16,185,129,0.14) 0%, rgba(6,182,212,0.05) 60%, transparent 80%)'
+          : 'radial-gradient(circle, rgba(59,130,246,0.12) 0%, rgba(99,102,241,0.05) 60%, transparent 80%)',
         filter: 'blur(4px)',
         transition: 'width 0.2s, height 0.2s, background 0.2s ease',
       }}

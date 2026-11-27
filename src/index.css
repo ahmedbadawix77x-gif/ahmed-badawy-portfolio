@@ -8,7 +8,7 @@
     background-color: #F8FBFF;
     color: #0F2A5F;
     background-image: 
-      radial-gradient(at 0% 0%, #DCEEFF 0%, transparent 45%), 
+      radial-gradient(at 0% 0%, #E6F0FC 0%, transparent 45%), 
       radial-gradient(at 100% 100%, #EEF7FF 0%, transparent 45%),
       radial-gradient(at 50% 50%, rgba(220, 238, 255, 0.3) 0%, transparent 60%);
     background-attachment: fixed;
@@ -62,10 +62,10 @@
    ========================================================== */
 body {
   background-image:
-    radial-gradient(at 0% 0%, #DCEEFF 0%, transparent 45%),
-    radial-gradient(at 100% 0%, rgba(167, 139, 250, 0.22) 0%, transparent 40%),
-    radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.18) 0%, transparent 45%),
-    radial-gradient(at 0% 100%, rgba(244, 114, 182, 0.14) 0%, transparent 40%) !important;
+    radial-gradient(at 0% 0%, #E6F0FC 0%, transparent 45%),
+    radial-gradient(at 100% 0%, rgba(167, 139, 250, 0.12) 0%, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.10) 0%, transparent 45%),
+    radial-gradient(at 0% 100%, rgba(251, 191, 36, 0.07) 0%, transparent 40%) !important;
   background-attachment: fixed;
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 /* ---------- decorative background ---------- */
-.decor .blob { position: absolute; border-radius: 9999px; filter: blur(60px); opacity: .5; }
+.decor .blob { position: absolute; border-radius: 9999px; filter: blur(70px); opacity: .3; }
 .decor .b1 { width: 380px; height: 380px; background: #A78BFA; top: -80px; right: -90px; opacity: .35; }
 .decor .b2 { width: 320px; height: 320px; background: #22D3EE; top: 520px; left: -110px; opacity: .30; }
 .decor .b3 { width: 300px; height: 300px; background: #F9A8D4; top: 980px; right: -80px; opacity: .35; }
@@ -161,3 +161,26 @@ body {
 @keyframes marquee-right { from { transform: translateX(calc(-50% - 7px)); } to { transform: translateX(0); } }
 @keyframes tool-pop { from { opacity: 0; transform: translateY(18px) scale(.7); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation-play-state: paused; } }
+
+/* ---- Data pipeline motif (source -> transform -> load) ---- */
+.flow { display: grid; grid-template-columns: 1fr 72px 1fr 72px 1fr; align-items: center; gap: 0; }
+.flow-node { position: relative; border-radius: 1rem; padding: 16px; background: linear-gradient(180deg,#fff,#F8FBFF); border: 1px solid #E2ECF8; }
+.flow-node::before { content: ''; position: absolute; left: 16px; right: 16px; top: 0; height: 3px; border-radius: 0 0 6px 6px; background: var(--a); }
+.flow-node.pulse { animation: node-pulse 4.8s ease-in-out infinite; animation-delay: var(--pd, 0s); }
+@keyframes node-pulse { 0%,100% { box-shadow: 0 0 0 0 transparent; } 50% { box-shadow: 0 10px 28px -14px var(--a); } }
+.flow-stage { font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--a); }
+.flow-title { font-size: 15px; font-weight: 800; color: #0F2A5F; margin-top: 2px; }
+.flow-sub { font-size: 12px; color: #64748B; margin-top: 2px; }
+.flow-chip { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: #fff; border: 1px solid #E2ECF8; }
+.flow-link { position: relative; height: 2px; background: repeating-linear-gradient(90deg, #CBD8EA 0 6px, transparent 6px 12px); overflow: visible; }
+.flow-dot { position: absolute; top: -3px; left: 0; width: 8px; height: 8px; border-radius: 3px; background: var(--a); opacity: 0; animation: flow-x 2.4s linear infinite; animation-delay: var(--d); box-shadow: 0 0 8px var(--a); }
+@keyframes flow-x { 0% { left: 0; opacity: 0; transform: scale(.6); } 15% { opacity: 1; transform: scale(1); } 85% { opacity: 1; } 100% { left: calc(100% - 8px); opacity: 0; transform: scale(.6); } }
+@keyframes flow-y { 0% { top: 0; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { top: calc(100% - 8px); opacity: 0; } }
+.medal { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #fff; border: 1px solid #E2ECF8; color: #334155; }
+.medal i { width: 8px; height: 8px; border-radius: 50%; background: var(--m); display: inline-block; }
+@media (max-width: 860px) {
+  .flow { grid-template-columns: 1fr; }
+  .flow-link { width: 2px; height: 44px; margin: 0 auto; background: repeating-linear-gradient(180deg, #CBD8EA 0 6px, transparent 6px 12px); }
+  .flow-dot { left: -3px; top: 0; animation-name: flow-y; }
+}
+@media (prefers-reduced-motion: reduce) { .flow-dot, .flow-node.pulse { animation: none; opacity: 1; } .flow-dot { left: 40%; } }

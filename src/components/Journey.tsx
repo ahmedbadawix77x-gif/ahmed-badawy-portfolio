@@ -1,5 +1,6 @@
 import React from 'react';
 import { 
+  CalendarDays,
   Database, 
   Code, 
   Zap, 
@@ -176,7 +177,7 @@ export const Journey: React.FC = () => {
 
                   {item.timeline && (
                     <div className="text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md mb-2 border border-amber-200/60">
-                      📅 {item.timeline}
+                      <CalendarDays className="w-3.5 h-3.5 inline -mt-0.5 mr-1" />{item.timeline}
                     </div>
                   )}
 

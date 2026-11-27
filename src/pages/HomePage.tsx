@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
 import { QuickStats } from '../components/QuickStats';
+import { DataFlow } from '../components/DataFlow';
 
 interface HomePageProps {
   onOpenResume: () => void;
@@ -68,6 +69,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenResume }) => {
       <div className="relative z-10">
         <Hero onOpenResume={onOpenResume} />
         <QuickStats />
+        <DataFlow />
 
         <section id="tools-showcase" className="relative py-16 sm:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

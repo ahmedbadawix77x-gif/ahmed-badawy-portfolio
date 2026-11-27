@@ -16,9 +16,11 @@ import {
   Zap,
   GitBranch,
   BarChart3,
-  CheckCircle2
+  CheckCircle2,
+  Workflow
 } from 'lucide-react';
 import { HeroVisual } from './HeroVisual';
+import { BrandIcon } from './BrandIcon';
 
 interface HeroProps {
   onOpenResume: () => void;
@@ -64,8 +66,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           <div className="lg:col-span-7 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-white border border-[#DCEEFF] shadow-xs relative overflow-hidden">
             
             {/* Ambient background glow */}
-            <div className="absolute -top-24 -left-24 w-72 h-72 bg-gradient-to-br from-blue-400/30 via-indigo-400/20 to-transparent rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-gradient-to-tr from-cyan-400/20 via-emerald-400/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -left-24 w-72 h-72 bg-gradient-to-br from-slate-400/10 via-blue-300/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-gradient-to-tr from-amber-200/10 via-slate-300/5 to-transparent rounded-full blur-3xl pointer-events-none" />
 
             {/* Subtle decorative background icon */}
             <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none text-[#0F2A5F]">
@@ -98,10 +100,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
                           background: 'linear-gradient(135deg, #1e40af 0%, #3B82F6 60%, #6366F1 100%)',
-                          boxShadow: '0 2px 12px rgba(59,130,246,0.35)',
+                          boxShadow: '0 2px 8px rgba(15,42,95,0.14)',
                         }}
                       >
-                        <span className="text-blue-200">⚡</span>
+                        <Zap className="w-3 h-3 text-blue-200" />
                         <span>Personal Technology Portfolio</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
                       </div>
@@ -110,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
                           background: 'linear-gradient(135deg, #065f46 0%, #059669 60%, #10B981 100%)',
-                          boxShadow: '0 2px 12px rgba(16,185,129,0.35)',
+                          boxShadow: '0 2px 8px rgba(15,42,95,0.14)',
                         }}
                       >
                         <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse shrink-0" />
@@ -122,10 +124,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
                           background: 'linear-gradient(135deg, #92400e 0%, #d97706 60%, #fbbf24 100%)',
-                          boxShadow: '0 2px 12px rgba(217,119,6,0.35)',
+                          boxShadow: '0 2px 8px rgba(15,42,95,0.14)',
                         }}
                       >
-                        <span>🏆</span>
+                        <Trophy className="w-3 h-3" />
                         <span>Top Performer #1</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.18) 0%, transparent 60%)' }} />
                       </div>
@@ -134,10 +136,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
                           background: 'linear-gradient(135deg, #4c1d95 0%, #7c3aed 60%, #a78bfa 100%)',
-                          boxShadow: '0 2px 12px rgba(124,58,237,0.35)',
+                          boxShadow: '0 2px 8px rgba(15,42,95,0.14)',
                         }}
                       >
-                        <span>🏗️</span>
+                        <Layers className="w-3 h-3" />
                         <span>Lakehouse &amp; Star Schema</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
                       </div>
@@ -146,10 +148,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                         className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-[11px] font-bold text-white relative overflow-hidden shrink-0"
                         style={{
                           background: 'linear-gradient(135deg, #0e7490 0%, #0891b2 60%, #06B6D4 100%)',
-                          boxShadow: '0 2px 12px rgba(6,182,212,0.35)',
+                          boxShadow: '0 2px 8px rgba(15,42,95,0.14)',
                         }}
                       >
-                        <span>🗄️</span>
+                        <Database className="w-3 h-3" />
                         <span>Data Engineering</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
                       </div>
@@ -161,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                           boxShadow: '0 2px 12px rgba(37,99,235,0.30)',
                         }}
                       >
-                        <span>⚙️</span>
+                        <Workflow className="w-3 h-3" />
                         <span>ETL & ELT Pipelines</span>
                         <span className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(105deg, rgba(255,255,255,0.15) 0%, transparent 60%)' }} />
                       </div>
@@ -193,13 +195,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 <div 
                   className="absolute -inset-x-6 -inset-y-3 rounded-[2rem] pointer-events-none"
                   style={{ 
-                    background: 'radial-gradient(ellipse at 30% 50%, rgba(59,130,246,0.25) 0%, transparent 55%), radial-gradient(ellipse at 80% 40%, rgba(99,102,241,0.18) 0%, transparent 60%)',
+                    background: 'radial-gradient(ellipse at 30% 50%, rgba(100,116,139,0.07) 0%, transparent 60%), radial-gradient(ellipse at 80% 40%, rgba(148,163,184,0.06) 0%, transparent 60%)',
                     filter: 'blur(12px)'
                   }}
                 />
                 <h1 
                   className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0F2A5F] leading-tight relative"
-                  style={{ animation: 'hero-name-glow 3.5s ease-in-out infinite' }}
                 >
                   Ahmed <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] via-[#2563EB] to-[#1D4ED8]">Badawy</span>
                 </h1>
@@ -297,11 +298,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* Quick Technology Avatars & Public Learning indicator */}
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <div className="flex -space-x-1.5">
-                  <div className="w-7 h-7 rounded-full bg-[#EEF7FF] border-2 border-white flex items-center justify-center text-xs shadow-xs" title="Python">🐍</div>
-                  <div className="w-7 h-7 rounded-full bg-[#EEF7FF] border-2 border-white flex items-center justify-center text-xs shadow-xs" title="SQL / PostgreSQL">🛢️</div>
-                  <div className="w-7 h-7 rounded-full bg-[#EEF7FF] border-2 border-white flex items-center justify-center text-xs shadow-xs" title="Data Viz & BI Dashboards">📊</div>
-                  <div className="w-7 h-7 rounded-full bg-[#EEF7FF] border-2 border-white flex items-center justify-center text-xs shadow-xs" title="AI-Assisted Engineering">🤖</div>
-                  <div className="w-7 h-7 rounded-full bg-[#EEF7FF] border-2 border-white flex items-center justify-center text-xs shadow-xs" title="Linux / Ubuntu / Docker">🐧</div>
+                  <div className="w-7 h-7 rounded-full bg-white border-2 border-white ring-1 ring-slate-200 flex items-center justify-center shadow-xs" title="Python"><BrandIcon name="python" size={14} /></div>
+                  <div className="w-7 h-7 rounded-full bg-white border-2 border-white ring-1 ring-slate-200 flex items-center justify-center shadow-xs" title="SQL / PostgreSQL"><BrandIcon name="postgresql" size={14} /></div>
+                  <div className="w-7 h-7 rounded-full bg-white border-2 border-white ring-1 ring-slate-200 flex items-center justify-center shadow-xs" title="Pandas & BI Dashboards"><BrandIcon name="pandas" size={14} /></div>
+                  <div className="w-7 h-7 rounded-full bg-white border-2 border-white ring-1 ring-slate-200 flex items-center justify-center shadow-xs" title="Airflow orchestration"><BrandIcon name="apacheairflow" size={14} /></div>
+                  <div className="w-7 h-7 rounded-full bg-white border-2 border-white ring-1 ring-slate-200 flex items-center justify-center shadow-xs" title="Linux / Docker"><BrandIcon name="docker" size={14} /></div>
                 </div>
                 <span className="text-[11px] font-medium text-slate-500 italic underline underline-offset-4 decoration-blue-200">
                   Learning & Building in Public • 2026
