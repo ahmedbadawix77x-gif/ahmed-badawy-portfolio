@@ -74,7 +74,7 @@ export const projectsData: Project[] = [
     description: "Graduation project for the Faculty of Specific Education (2025). A comprehensive digital platform unifying department criteria, faculty resources, and student information. Rated 'Excellent' by the President of Benha University and over 15 Department Heads.",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"],
     featured: true,
-    github: "https://github.com/ahmedbadawix77x-gif",
+    github: "https://github.com/ahmedbadawix77x-gif/Faculty-of-Specific-Education",
     demo: "https://faculty-of-specific-education.vercel.app/",
     imageAccent: "linear-gradient(135deg, #2563EB 0%, #60A5FA 100%)",
     details: {
@@ -211,6 +211,355 @@ export const projectsData: Project[] = [
         "Warm, elegant brand identity",
         "Fully responsive",
         "Live deployed"
+      ]
+    }
+  },
+  {
+    "id": "shopflow-api",
+    "title": "ShopFlow API",
+    "subtitle": "Production-style e-commerce REST API",
+    "category": "Web Development",
+    "secondaryCategories": [
+      "Data Engineering"
+    ],
+    "status": "Completed",
+    "description": "A layered e-commerce REST API built with FastAPI, async SQLAlchemy 2.0, PostgreSQL and Alembic migrations, with JWT authentication, Argon2 password hashing, repositories and services layers, and automated unit and integration tests. Documented in a detailed Arabic README.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy 2.0",
+      "PostgreSQL",
+      "Alembic",
+      "JWT",
+      "Pydantic",
+      "Pytest"
+    ],
+    "featured": true,
+    "github": "https://github.com/ahmedbadawix77x-gif/shopflow-api",
+    "imageAccent": "linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)",
+    "details": {
+      "problem": "E-commerce back ends need clear structure, secure authentication and reliable data migrations.",
+      "idea": "Production-style e-commerce REST API",
+      "solution": "Built a layered architecture (models, schemas, repositories, services, API) with async database access, JWT auth, migrations and tests.",
+      "role": "Back-End Developer. Designed the architecture, the data model and the test suite.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Layered architecture: models, schemas, repositories, services, API",
+        "JWT authentication with Argon2 password hashing",
+        "Async SQLAlchemy 2.0 with Alembic migrations",
+        "Unit and integration test suite"
+      ]
+    }
+  },
+  {
+    "id": "shopery-store",
+    "title": "Shopery — Organic Food Store",
+    "subtitle": "Modern responsive e-commerce storefront",
+    "category": "Web Development",
+    "secondaryCategories": [],
+    "status": "Completed",
+    "description": "A fresh, responsive storefront for organic food with home, shop, blog and contact pages, product sections, promo banners and testimonials. Built with React, TypeScript, Vite, Tailwind CSS and shadcn/ui.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "React Router"
+    ],
+    "featured": true,
+    "github": "https://github.com/ahmedbadawix77x-gif/Shopery",
+    "demo": "https://shopery-organic-store.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
+    "details": {
+      "problem": "Organic food shops need a clean, trustworthy storefront that works on every screen.",
+      "idea": "Modern responsive e-commerce storefront",
+      "solution": "Built a multi-page React storefront with reusable sections and a consistent green brand style.",
+      "role": "Front-End Developer and UI implementer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Home, shop, blog and contact pages",
+        "Reusable section components",
+        "Fully responsive",
+        "Live on Vercel"
+      ]
+    }
+  },
+  {
+    "id": "zeyad-sales-portfolio",
+    "title": "Zeyad Haitham — Sales Portfolio",
+    "subtitle": "Professional portfolio for a sales and business-development student",
+    "category": "Web Development",
+    "secondaryCategories": [],
+    "status": "Completed",
+    "description": "A single-page professional portfolio with hero, overview, experience, education, training, skills and a print-ready resume view. All content lives in one typed data file.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/Zeyad-Haitham-portfolio",
+    "demo": "https://zeyad-haitham-portfolio.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #1d4ed8 0%, #38bdf8 100%)",
+    "details": {
+      "problem": "A sales student needed a credible online presence and a printable resume.",
+      "idea": "Professional portfolio for a sales and business-development student",
+      "solution": "Built a clean one-page site driven by a single data file, with a resume modal for printing.",
+      "role": "Front-End Developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Data-driven content",
+        "Print-ready resume modal",
+        "Responsive layout",
+        "Live on Vercel"
+      ]
+    }
+  },
+  {
+    "id": "campusmind-ai-advisor",
+    "title": "CampusMind — AI Academic Advisor",
+    "subtitle": "AI assistant that answers college and academic questions",
+    "category": "AI",
+    "secondaryCategories": [
+      "Education"
+    ],
+    "status": "Completed",
+    "description": "An AI-powered academic advisor web app for college students built with React, TypeScript and the Gemini API. It needs your own Gemini API key to run locally, see the README.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Gemini API",
+      "Tailwind CSS"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/AI_Agent_For_College",
+    "imageAccent": "linear-gradient(135deg, #7c3aed 0%, #38bdf8 100%)",
+    "details": {
+      "problem": "Students struggle to find quick, clear answers about courses and academic planning.",
+      "idea": "AI assistant that answers college and academic questions",
+      "solution": "Built a chat-style assistant powered by a large language model with a clean interface.",
+      "role": "Developer. Built the interface and the AI integration.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Chat-style AI advisor",
+        "Gemini API integration",
+        "Clear setup guide in the README"
+      ]
+    }
+  },
+  {
+    "id": "django-event-planner",
+    "title": "Django Event Planner",
+    "subtitle": "Event management web app with Django",
+    "category": "Web Development",
+    "secondaryCategories": [
+      "Education"
+    ],
+    "status": "Completed",
+    "description": "A Django application for planning and managing events, with models, views, templates and tests. Clean requirements file and run instructions in the README.",
+    "technologies": [
+      "Python",
+      "Django",
+      "SQLite",
+      "HTML",
+      "CSS"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/Assignments",
+    "imageAccent": "linear-gradient(135deg, #065f46 0%, #34d399 100%)",
+    "details": {
+      "problem": "Organisers need a simple way to create and track events.",
+      "idea": "Event management web app with Django",
+      "solution": "Built a Django app with event models, CRUD views and tests.",
+      "role": "Developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Event CRUD with Django models and views",
+        "Automated tests pass",
+        "Tested setup in a clean virtual environment"
+      ]
+    }
+  },
+  {
+    "id": "gdg-grade-calculator",
+    "title": "GDG C++ Grade Calculator",
+    "subtitle": "Console program with input validation",
+    "category": "Education",
+    "secondaryCategories": [],
+    "status": "Completed",
+    "description": "A C++ console program from the Google Developer Groups programming-fundamentals track. It reads a name and three scores, validates them, then prints the average and a letter grade.",
+    "technologies": [
+      "C++"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/GDG",
+    "imageAccent": "linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%)",
+    "details": {
+      "problem": "Practise the fundamentals: input, conditionals and validation.",
+      "idea": "Console program with input validation",
+      "solution": "Wrote a small program that validates scores and maps the average to a grade.",
+      "role": "Student developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Input validation",
+        "Average and letter grade",
+        "Compiles with g++ -Wall without warnings"
+      ]
+    }
+  },
+  {
+    "id": "computer-course-hub",
+    "title": "Computer Course Learning Hub",
+    "subtitle": "Arabic multi-page educational website",
+    "category": "Education",
+    "secondaryCategories": [
+      "Web Development"
+    ],
+    "status": "Completed",
+    "description": "A multi-page Arabic educational site for a university computer course: lesson, activities, library, quiz and contact pages.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Arabic RTL"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/Dr.mostafa",
+    "demo": "https://computer-course-learning-hub.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #0369a1 0%, #38bdf8 100%)",
+    "details": {
+      "problem": "A course needed an organised online learning resource in Arabic.",
+      "idea": "Arabic multi-page educational website",
+      "solution": "Built a multi-page RTL site with lesson, quiz and library pages.",
+      "role": "Web Developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Lesson, activities, library and quiz pages",
+        "Arabic right-to-left layout",
+        "Live on Vercel"
+      ]
+    }
+  },
+  {
+    "id": "computer-components-site",
+    "title": "Computer Components Course Site",
+    "subtitle": "Arabic educational site with audio and video lesson",
+    "category": "Education",
+    "secondaryCategories": [
+      "Web Development"
+    ],
+    "status": "Completed",
+    "description": "An Arabic educational website about computer components with lesson content, activities, a quiz and an audio and video lesson.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Arabic RTL"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/computer-components-website",
+    "demo": "https://computer-components-course-site.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #0e7490 0%, #22d3ee 100%)",
+    "details": {
+      "problem": "Students needed a visual guide to computer parts.",
+      "idea": "Arabic educational site with audio and video lesson",
+      "solution": "Built a multi-page site with embedded lesson media.",
+      "role": "Web Developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Lesson with audio and video",
+        "Quiz and activities",
+        "Live on Vercel"
+      ]
+    }
+  },
+  {
+    "id": "lan-design-guide",
+    "title": "LAN Design Beginner Guide",
+    "subtitle": "Arabic guide to designing a local network",
+    "category": "Education",
+    "secondaryCategories": [],
+    "status": "Completed",
+    "description": "A single-page Arabic guide that explains step by step how to design a local area network.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/mostafa3",
+    "demo": "https://lan-design-beginner-guide.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #4338ca 0%, #818cf8 100%)",
+    "details": {
+      "problem": "Beginners find network design hard to approach.",
+      "idea": "Arabic guide to designing a local network",
+      "solution": "Wrote a clear one-page guide in Arabic.",
+      "role": "Author and developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "Step-by-step LAN design",
+        "Arabic content",
+        "Live on Vercel"
+      ]
+    }
+  },
+  {
+    "id": "packet-tracer-guide",
+    "title": "Packet Tracer Network Design Guide",
+    "subtitle": "Floor-by-floor Cisco Packet Tracer tutorial in Arabic",
+    "category": "Education",
+    "secondaryCategories": [],
+    "status": "Completed",
+    "description": "A short Arabic tutorial site on designing a four-floor network in Cisco Packet Tracer, one page per floor.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Cisco Packet Tracer"
+    ],
+    "featured": false,
+    "github": "https://github.com/ahmedbadawix77x-gif/task-3",
+    "demo": "https://packet-tracer-network-guide.vercel.app",
+    "imageAccent": "linear-gradient(135deg, #0891b2 0%, #67e8f9 100%)",
+    "details": {
+      "problem": "Network labs are easier to follow when explained floor by floor.",
+      "idea": "Floor-by-floor Cisco Packet Tracer tutorial in Arabic",
+      "solution": "Wrote one page per floor in simple Egyptian-dialect Arabic.",
+      "role": "Author and developer.",
+      "challenges": "Keeping the code clean and the project easy to run from a fresh clone.",
+      "howISolvedThem": "Documented setup in a detailed README and tested the run steps.",
+      "whatILearned": "Structuring a small project end to end: design, build, document and ship.",
+      "futureImprovements": "More features, tests and a polished demo.",
+      "highlights": [
+        "One page per floor",
+        "Plain-language explanations",
+        "Live on Vercel"
       ]
     }
   }
