@@ -125,7 +125,6 @@ body {
   .decor .r1, .decor .d1, .decor .t1, .decor .p1, .decor .w1 { display: none; }
   .decor .blob { opacity: .25; }
 }
-@media (prefers-reduced-motion: reduce) { .decor .shape { animation: none !important; } }
 
 /* ---------- tools & software badges ---------- */
 .tool-tile {
@@ -160,7 +159,6 @@ body {
 @keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 7px)); } }
 @keyframes marquee-right { from { transform: translateX(calc(-50% - 7px)); } to { transform: translateX(0); } }
 @keyframes tool-pop { from { opacity: 0; transform: translateY(18px) scale(.7); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .marquee-track { animation-play-state: paused; } }
 
 /* ---- Data pipeline motif (source -> transform -> load) ---- */
 .flow { display: grid; grid-template-columns: 1fr 72px 1fr 72px 1fr; align-items: center; gap: 0; }
@@ -183,4 +181,3 @@ body {
   .flow-link { width: 2px; height: 44px; margin: 0 auto; background: repeating-linear-gradient(180deg, #CBD8EA 0 6px, transparent 6px 12px); }
   .flow-dot { left: -3px; top: 0; animation-name: flow-y; }
 }
-@media (prefers-reduced-motion: reduce) { .flow-dot, .flow-node.pulse { animation: none; opacity: 1; } .flow-dot { left: 40%; } }
